@@ -1,0 +1,194 @@
+
+
+/* test backgroup */
+#title_web{
+    background-color: rgb(12, 78, 12);
+    text-align: center;
+
+    /* Cho khung nền to hơn */
+    padding: 20px;
+
+    /* Loại bỏ khoảng trống margin */
+    margin: 0;    
+}
+#waring1{
+    color: rgb(172, 218, 7);
+}
+
+nav{
+    background-color: rgb(248, 246, 246);
+    text-align: center;
+    /* padding: 10px 15px; */
+    margin: 0;
+   
+    /* Khống chế các padding con có thông số như(20px 30px) vượt nav mẹ (10px 15px) ở trên */
+    overflow: hidden;
+}
+
+nav a{
+    color: blue; 
+    /* Cho khung nền to hơn */
+    padding: 5px 15px;   
+    
+    /* block từng mục trong nav a, sau đó cho từng mục chảy qua trái phải tùy ý. Ứng dụng cho màn hình điện thoại  */
+    display: block;
+
+
+    text-align: center;
+
+    /* bỏ gạch chân  */
+    /* text-decoration: none; */
+
+    /* Chảy các nav a qua trái sau khi display: block; */
+    /* float: left; */
+}
+
+.link_fast_left{
+    float: left;
+}
+
+.link_fast_right{
+    float: right;
+}
+/* Hiệu ứng chuột */
+nav a:hover{
+    /* Thay màu nền */
+    background-color: white;
+
+    /* bỏ gạch chân  */
+    text-decoration: none;
+
+    /* Thay màu chữ */
+    color: red;
+}
+
+/* Màu cho các tiêu đề */
+h1 {
+    color:  white;   
+}
+
+h2 {
+    color:  goldenrod;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    color:  blue;
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    color:  blue;
+    padding: 0;
+    margin: 0;
+}
+
+
+    
+footer{
+    text-align: right;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    /* width: 100%; */
+}
+
+td, th {
+    border: 3px solid #dddddd;
+    text-align: center; 
+    /* padding: 8px; */
+}
+
+/* tr:nth-child(even) {>>>r: row */
+/* td:nth-child(even) {
+    background-color: #dddddd;
+}  */
+
+
+/* flexbox */
+/* * {
+    box-sizing: border-box;
+  } */
+  
+.flex_container {
+    /* flex: uốn cong, display flex : hiển thị linh hoạt */
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    /* text-align: center; */
+
+    /* wrap: sẽ tự động xuống dòng, nowrap: dản theo hàng ngang ko xuống dòng  */
+    flex-wrap: nowrap;
+    }
+
+.flex_left {
+    background-color:whitesmoke;
+    padding: 10px;
+    flex: 30%;
+    }
+
+.flex_right {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    flex: 70%;
+    }
+/* Sửa lỗi đối với các ảnh ko cùng chiều cao và chữ mô tả quá dài. Cho wrap ngắt dòng các ảnh */
+#img_container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Nguồn ảnh thực tế */
+.img_item{
+    width: 33%;    
+    float: left;
+    /* text-align: left; */
+}
+
+.img_photo{
+    height: 200px;
+    width: 90%;    
+}
+
+.title_img{
+    font-size: 120%;
+    font-weight: bold;
+    padding: 5px 5px;
+}
+
+.descrip_img{
+    padding: 5px 5px;
+}
+
+/* Cách wrap khi thay đổi màn hình dektop ->ipad */
+@media (max-width: 800px) {
+    /* *{
+        background-color: green;   
+    } */
+    .flex_container {
+        /* Chia theo cột trong container */
+        flex-direction: column;
+        
+    }
+    .img_item{
+        width: 48%;
+    }
+}
+
+/* Cách wrap khi thay đổi màn hình ipad ->phone */
+@media (max-width: 400px) {
+    /* *{
+        background-color: rgb(128, 0, 6);    
+    } */
+    .flex_container {
+        flex-direction: column;
+    }
+    .img_item{
+        width: 98%;
+    }
+}
